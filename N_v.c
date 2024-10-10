@@ -24,7 +24,7 @@ void git_log_oneline() {
 
 void push_existing(const char *branch_name) {
     char command[256];
-    snprintf(command, sizeof(command), "git push origin HEAD:%s", branch_name);
+    snprintf(command, sizeof(command), "git push --set-upstream %s", branch_name);
     system(command); // 推送到指定的分支
     printf("N_v is pushing to the existing repository on branch: %s\n", branch_name);
 }
