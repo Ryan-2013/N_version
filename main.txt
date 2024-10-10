@@ -1,11 +1,48 @@
-這是我用c像終端輸入git命令只是改寫命令名稱而已,所以如果你要下載請先下載git,
-這些事改寫過的命令.
-
-./N_v.exe init 
-#這是git init初始化
 
 
-./N_v.exe get "https://github.com/Ryan-2013/N_version" 
-#這是clone github倉庫
+### 中文解說
 
+這是我用 C 語言編寫的程序，模擬在終端中輸入 Git 命令，只是將命令名稱進行了改寫。因此，如果你想使用這個程序，請先確保已安裝 Git。以下是各個命令的說明：
+
+- `./N_v.exe init`  
+  # 這是用來初始化 Git 倉庫，類似於 `git init`。
+
+- `./N_v.exe get "https://github.com/Ryan-2013/N_version"`  
+  # 這是克隆 GitHub 倉庫，類似於 `git clone`。
+
+- `./N_v.exe push main "https://github.com/Ryan-2013/N_version"`  
+  # 將更改推送到 GitHub 倉庫，類似於 `git push`。
+
+- `./N_v.exe log`  
+  # 查看所有提交歷史，類似於 `git log --oneline`。
+
+- `./N_v save "The N_v is ok"`  
+  # 提交更改並添加描述，類似於 `git commit -m`。
+
+- `./N_v check bdc49f8`  
+  # 切換到特定的分支或提交，類似於 `git checkout`。
+
+---
+
+### English Explanation
+
+This is a program I wrote in C that mimics entering Git commands in a terminal by simply rewriting the command names. Therefore, please ensure that you have Git installed if you want to use it. Below are the explanations for each command:
+
+- `./N_v.exe init`  
+  # This initializes a Git repository, similar to `git init`.
+
+- `./N_v.exe get "https://github.com/Ryan-2013/N_version"`  
+  # This clones a GitHub repository, similar to `git clone`.
+
+- `./N_v.exe push main "https://github.com/Ryan-2013/N_version"`  
+  # This pushes changes to the GitHub repository, similar to `git push`.
+
+- `./N_v.exe log`  
+  # This displays all commit history, similar to `git log --oneline`.
+
+- `./N_v save "The N_v is ok"`  
+  # This commits changes with a message, similar to `git commit -m`.
+
+- `./N_v check bdc49f8`  
+  # This checks out a specific branch or commit, similar to `git checkout`.
 
