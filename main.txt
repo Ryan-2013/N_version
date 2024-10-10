@@ -10,7 +10,7 @@
 - `./N_v.exe get "https://github.com/Ryan-2013/N_version"`  
   # 這是克隆 GitHub 倉庫，類似於 `git clone`。
 
-- `./N_v.exe push main "https://github.com/Ryan-2013/N_version"`  
+- `./N_v.exe push "https://github.com/Ryan-2013/N_version"`  
   # 將更改推送到 GitHub 倉庫，類似於 `git push`。
 
 - `./N_v.exe log`  
@@ -34,7 +34,7 @@ This is a program I wrote in C that mimics entering Git commands in a terminal b
 - `./N_v.exe get "https://github.com/Ryan-2013/N_version"`  
   # This clones a GitHub repository, similar to `git clone`.
 
-- `./N_v.exe push main "https://github.com/Ryan-2013/N_version"`  
+- `./N_v.exe push "https://github.com/Ryan-2013/N_version"`  
   # This pushes changes to the GitHub repository, similar to `git push`.
 
 - `./N_v.exe log`  
