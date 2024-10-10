@@ -75,7 +75,7 @@ int main(int argc, char const *argv[]) {
         }
         const char *id = argv[2];
         check_out(id);
-    } else if (areStringsEqual(argv[1], "push_existing")) {
+    } else if (areStringsEqual(argv[1], "push")) {
         if (argc < 3) {
             printf("Usage: %s push_existing <branch_name>\n", argv[0]);
             return 1;
