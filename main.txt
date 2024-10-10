@@ -1,0 +1,11 @@
+這是我用c像終端輸入git命令只是改寫命令名稱而已,所以如果你要下載請先下載git,
+這些事改寫過的命令.
+
+./N_v.exe init 
+#這是git init初始化
+
+
+./N_v.exe get "https://github.com/Ryan-2013/N_version" 
+#這是clone github倉庫
+
+
