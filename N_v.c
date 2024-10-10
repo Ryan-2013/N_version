@@ -14,7 +14,7 @@ void initRepo() {
 void clone_github(const char *url) {
     char command[256];
     snprintf(command, sizeof(command), "git clone \"%s\"", url);
-    system(command); // 克隆仓库
+    system(command);
     printf("N_v is cloning the repository: %s\n", url);
 }
 
@@ -22,31 +22,25 @@ void git_log_oneline() {
     system("git log --oneline");
 }
 
-void push_to_the_github(const char *url, const char *branch) {
+void push_existing(const char *branch_name) {
     char command[256];
-    // 设置远程仓库 URL
-    snprintf(command, sizeof(command), "git remote add origin \"%s\"", url);
-    system(command);
-    
-    // 推送到远程仓库的指定分支
-    snprintf(command, sizeof(command), "git push -u origin \"%s\"", branch);
-    system(command);
-
-    printf("N_v is pushing to the repository: %s, branch: %s\n", url, branch);
+    snprintf(command, sizeof(command), "git push origin HEAD:%s", branch_name);
+    system(command); // 推送到指定的分支
+    printf("N_v is pushing to the existing repository on branch: %s\n", branch_name);
 }
 
 void saveChanges(const char *status_name) {
     system("git add .");
     char command[256];
     snprintf(command, sizeof(command), "git commit -m \"%s\"", status_name);
-    system(command); // 提交更改
+    system(command);
     printf("Changes have been saved with status: %s\n", status_name);
 }
 
 void check_out(const char *id) {
     char command[256];
     snprintf(command, sizeof(command), "git checkout %s", id);
-    system(command); // 检出到指定的分支或提交
+    system(command);
     printf("Code has been checked out to: %s\n", id);
 }
 
@@ -81,14 +75,13 @@ int main(int argc, char const *argv[]) {
         }
         const char *id = argv[2];
         check_out(id);
-    } else if (areStringsEqual(argv[1], "push")) {
-        if (argc < 4) {
-            printf("Usage: %s push <repository_url> <branch_name>\n", argv[0]);
+    } else if (areStringsEqual(argv[1], "push_existing")) {
+        if (argc < 3) {
+            printf("Usage: %s push_existing <branch_name>\n", argv[0]);
             return 1;
         }
-        const char *url = argv[2];
-        const char *branch = argv[3];
-        push_to_the_github(url, branch);
+        const char *branch_name = argv[2];
+        push_existing(branch_name);
     } else {
         printf("Unknown command: %s\n", argv[1]);
     }
