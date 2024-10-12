@@ -1,6 +1,7 @@
 
 
 ### 中文解說
+裡面的exe不是最新的
 
 這是我用 C 語言編寫的程序，模擬在終端中輸入 Git 命令，只是將命令名稱進行了改寫。因此，如果你想使用這個程序，請先確保已安裝 Git。以下是各個命令的說明：
 
@@ -25,6 +26,7 @@
 ---
 
 ### English Explanation
+The exe inside is not the latest one
 
 This is a program I wrote in C that mimics entering Git commands in a terminal by simply rewriting the command names. Therefore, please ensure that you have Git installed if you want to use it. Below are the explanations for each command:
 
